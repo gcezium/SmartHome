@@ -1,0 +1,14 @@
+﻿.content-wrapper {
+  background: #f9fafc;
+}
+.dashboard .info-box .info-box-text {
+  display: block;
+  text-align: center;
+}
+.dashboard .info-box .info-box-number {
+  display: block;
+  text-align: center;
+  font-size: 36px;
+  font-weight: normal;
+  color: #848484;
+}
