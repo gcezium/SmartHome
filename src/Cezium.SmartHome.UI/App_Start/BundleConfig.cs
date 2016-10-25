@@ -17,6 +17,7 @@ namespace Cezium.SmartHome.UI
                 .Include("~/Scripts/angular.min.js")
                 .Include("~/Scripts/angular-messages.min.js")
                 .Include("~/Scripts/angular-message-format.min.js")
+                .Include("~/app/lib/angular/angular-ui-router.js")
                 .Include("~/app/shared/components/*.js")
                 .Include("~/app/shared/app.components.js")
             );

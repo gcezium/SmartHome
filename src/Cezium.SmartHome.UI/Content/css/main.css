@@ -1,6 +1,27 @@
-﻿.content-wrapper {
-  background: #f9fafc;
+﻿.main-sidebar {
+  background: white !important;
 }
+.main-sidebar .sidebar-menu li i {
+  display: inline-block;
+  width: 24px;
+  font-size: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  margin-right: 10px;
+}
+.main-sidebar .sidebar-menu li span {
+  font-weight: normal;
+  position: relative;
+  top: -3px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+/*
+.content-wrapper{
+    background: #f9fafc;
+}
+*/
 .dashboard .info-box .info-box-text {
   display: block;
   text-align: center;

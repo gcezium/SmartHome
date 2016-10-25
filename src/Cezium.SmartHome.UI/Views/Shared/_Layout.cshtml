@@ -18,7 +18,7 @@
     <![endif]-->
 </head>
 
-<body class="hold-transition skin-black-light sidebar-mini">
+<body class="hold-transition skin-black-light sidebar-mini" data-ng-app="app">
     <div class="wrapper">
 
         <header class="main-header">
@@ -121,7 +121,7 @@
 
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="dist/img/user2-160x160.jpg" class="user-image">
+                                <img src="#" class="user-image">
                                 <span class="hidden-xs">@User.Identity.Name</span>
                             </a>
                             <ul class="dropdown-menu">
@@ -179,18 +179,18 @@
                 
 
                 <ul class="sidebar-menu">
+                    <li class="header">НАВИГАЦИЯ</li>
+
+                    <li><a href="#"><i class="ion-ios-settings-strong"></i><span>Управление</span></a></li>
+                    <li><a href="#"><i class="ion-unlocked"></i><span>Безопасность</span></a></li>
+                    <li><a href="#"><i class="ion-ios-pulse-strong"></i><span>Статистика</span></a></li>
+                    <li><a href="#"><i class="ion-person-stalker"></i><span>Пользователи</span></a></li>
+                    <li><a href="#"><i class="ion-fork-repo"></i><span>Сценарии</span></a></li>
 
                     <li class="header">ИНФО</li>
 
-                    <li><a href="#">Server is &nbsp; <i class="fa fa-circle text-success"></i>online</a></li>
-
-                    <li class="header">НАВИГАЦИЯ</li>
-
-                    <li><a href="#"><i class="fa fa-sliders"></i> <span>Управление</span></a></li>
-                    <li><a href="#"><i class="fa fa-unlock-alt"></i> <span>Безопасность</span></a></li>
-                    <li><a href="#"><i class="fa fa-bar-chart-o"></i> <span>Статистика</span></a></li>
-                    <li><a href="#"><i class="fa fa-users"></i> <span>Пользователи</span></a></li>
-
+                    <li><a href="#"><i class="ion-clock"></i><span>События</span></a></li>
+                    <li><a href="#"><span>Server is </span>&nbsp; <i class="fa fa-circle text-success"></i>online</a></li>
 
                     @*
             <li class="treeview">

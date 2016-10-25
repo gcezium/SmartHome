@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cezium.SmartHome.UI", "Cezium.SmartHome.UI\Cezium.SmartHome.UI.csproj", "{F6A96325-0605-4EC0-BC0C-FC94DBAA978A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cezium.SmartHome.OpenHabDb", "SmartHome.OpenHabDb\Cezium.SmartHome.OpenHabDb.csproj", "{027A4EDE-C850-4087-B689-358D9945085D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cezium.SmartHome.Api", "Cezium.SmartHome.Api\Cezium.SmartHome.Api.csproj", "{0BF7B3FE-4821-4780-A980-F2688DFDE522}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{F6A96325-0605-4EC0-BC0C-FC94DBAA978A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6A96325-0605-4EC0-BC0C-FC94DBAA978A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6A96325-0605-4EC0-BC0C-FC94DBAA978A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{027A4EDE-C850-4087-B689-358D9945085D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{027A4EDE-C850-4087-B689-358D9945085D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{027A4EDE-C850-4087-B689-358D9945085D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{027A4EDE-C850-4087-B689-358D9945085D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BF7B3FE-4821-4780-A980-F2688DFDE522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BF7B3FE-4821-4780-A980-F2688DFDE522}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BF7B3FE-4821-4780-A980-F2688DFDE522}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BF7B3FE-4821-4780-A980-F2688DFDE522}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
