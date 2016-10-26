@@ -54,4 +54,4 @@
 	return Page;
 };
 
-campaignPage.$inject = [];
+dashboardPage.$inject = [];

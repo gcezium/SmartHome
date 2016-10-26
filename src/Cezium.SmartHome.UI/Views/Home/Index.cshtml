@@ -1,59 +1,320 @@
-﻿@{
-    ViewBag.Title = "Обзор";
+﻿@using Microsoft.AspNet.Identity
+
+@{ 
+    Layout = null;
 }
 
-<section ui-view>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartHome</title>
+
+    @Styles.Render("~/Content/css")
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="hold-transition skin-black-light sidebar-mini" data-ng-app="app">
+    <div class="wrapper">
+
+        <header class="main-header">
+
+            <a href="/" class="logo">
+                <span class="logo-mini">S<b>H</b></span>
+                <span class="logo-lg">Smart <b>Home</b></span>
+            </a>
 
 
-</section>
+            <nav class="navbar navbar-static-top" role="navigation">
+                @*
+                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                *@
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        @if (false)
+                        {
+                            <li class="dropdown messages-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span class="label label-success">4</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="header">You have 4 messages</li>
+                                    <li>
+                                        <ul class="menu">
+                                            <li>
+                                                <a href="#">
+                                                    <div class="pull-left">
+                                                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                                    </div>
+                                                    <h4>
+                                                        Support Team
+                                                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                    </h4>
+                                                    <p>Why not buy a new awesome theme?</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="footer"><a href="#">See All Messages</a></li>
+                                </ul>
+                            </li>
 
-<div class="dashboard">
 
-    <div class="row">
+                            <li class="dropdown notifications-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-bell-o"></i>
+                                    <span class="label label-warning">10</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="header">You have 10 notifications</li>
+                                    <li>
+                                        <ul class="menu">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="footer"><a href="#">View all</a></li>
+                                </ul>
+                            </li>
+                        }
 
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="info-box">
-                <span class="info-box-icon bg-aqua"><i class="ion-thermometer"></i></span>
-                <div class="info-box-content">
-                    <span class="info-box-text">Внутр. температура</span>
-                    <span class="info-box-number">25</span>
+                        <li class="dropdown tasks-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-flag-o"></i>
+                                <span class="label label-danger">9</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 9 tasks</li>
+                                <li>
+                                    <ul class="menu">
+                                        <li>
+                                            <a href="#">
+                                                <h3>
+                                                    Design some buttons
+                                                    <small class="pull-right">20%</small>
+                                                </h3>
+                                                <div class="progress xs">
+                                                    <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">20% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer">
+                                    <a href="#">View all tasks</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="#" class="user-image">
+                                <span class="hidden-xs">@User.Identity.Name</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="user-header">
+                                    <img src="" class="img-circle">
+                                    @*
+                                        <p>
+                                            Alexander Pierce - Web Developer
+                                            <small>Member since Nov. 2012</small>
+                                        </p>
+                                    *@
+                                </li>
+                                @*
+                                    <li class="user-body">
+                                        <div class="row">
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Followers</a>
+                                            </div>
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Sales</a>
+                                            </div>
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Friends</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                *@
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="/accounts/profile/@User.Identity.GetUserId()" class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="/accounts/logoff" class="btn btn-default btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        @if (false)
+                        {
+                            <li>
+                                <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                            </li>
+                        }
+                    </ul>
                 </div>
-            </div>
+            </nav>
+        </header>
+
+
+        <aside class="main-sidebar">
+
+            <section class="sidebar">
+
+                <ul class="sidebar-menu">
+                    <li class="header">НАВИГАЦИЯ</li>
+
+                    <li><a data-ui-sref="control"><i class="ion-ios-settings-strong"></i><span>Управление</span></a></li>
+                    <li><a data-ui-sref="security"><i class="ion-unlocked"></i><span>Безопасность</span></a></li>
+                    <li><a data-ui-sref="reports"><i class="ion-ios-pulse-strong"></i><span>Статистика</span></a></li>
+                    <li><a data-ui-sref="users"><i class="ion-person-stalker"></i><span>Пользователи</span></a></li>
+                    <li><a data-ui-sref="scenarios"><i class="ion-fork-repo"></i><span>Сценарии</span></a></li>
+
+                    <li class="header">ИНФО</li>
+
+                    <li><a data-ui-sref="actions"><i class="ion-clock"></i><span>События</span></a></li>
+                    <li><a href="#"><span>Server is </span>&nbsp; <i class="fa fa-circle text-success"></i>online</a></li>
+
+                    @*
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-link"></i> <span>Multilevel</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#">Link in level 2</a></li>
+                                <li><a href="#">Link in level 2</a></li>
+                            </ul>
+                        </li>
+                    *@
+                </ul>
+
+            </section>
+
+        </aside>
+
+
+
+        <div class="content-wrapper">
+            <section class="content-header">
+                <h1>
+                    главная страница
+                    <small>Обзор всего происходящего</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+                    <li class="active">Here</li>
+                </ol>
+            </section>
+
+            <section class="content" ui-view></section>
+
         </div>
 
 
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="info-box">
-                <span class="info-box-icon bg-red"><i class="ion-thermometer"></i></span>
-                <div class="info-box-content">
-                    <span class="info-box-text">Наружн. температура</span>
-                    <span class="info-box-number">93,139</span>
-                </div>
+
+
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                Anything you want
             </div>
-        </div>
+            <strong>Copyright &copy; @DateTime.Now.Year <a href="https://vk.com/cezium">Cezium</a>.</strong> All rights reserved.
+        </footer>
 
 
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="info-box">
-                <span class="info-box-icon bg-green"><i class="ion-umbrella"></i></span>
-                <div class="info-box-content">
-                    <span class="info-box-text">Влажность</span>
-                    <span class="info-box-number">410</span>
+
+        @if (false)
+        {
+            <aside class="control-sidebar control-sidebar-dark">
+                <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+                    <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+                    <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="control-sidebar-home-tab">
+                        <h3 class="control-sidebar-heading">Recent Activity</h3>
+                        <ul class="control-sidebar-menu">
+                            <li>
+                                <a href="javascript::;">
+                                    <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+                                    <div class="menu-info">
+                                        <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                                        <p>Will be 23 on April 24th</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                        <ul class="control-sidebar-menu">
+                            <li>
+                                <a href="javascript::;">
+                                    <h4 class="control-sidebar-subheading">
+                                        Custom Template Design
+                                        <span class="pull-right-container">
+                                            <span class="label label-danger pull-right">70%</span>
+                                        </span>
+                                    </h4>
+
+                                    <div class="progress progress-xxs">
+                                        <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+
+                    <div class="tab-pane" id="control-sidebar-settings-tab">
+                        <form method="post">
+                            <h3 class="control-sidebar-heading">General Settings</h3>
+
+                            <div class="form-group">
+                                <label class="control-sidebar-subheading">
+                                    Report panel usage
+                                    <input type="checkbox" class="pull-right" checked>
+                                </label>
+
+                                <p>
+                                    Some information about this general settings option
+                                </p>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </aside>
+        }
 
 
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="info-box">
-                <span class="info-box-icon bg-yellow"><i class="ion-android-sunny"></i></span>
-                <div class="info-box-content">
-                    <span class="info-box-text">Освещенность</span>
-                    <span class="info-box-number">13,648</span>
-                </div>
-            </div>
-        </div>
-
+        <div class="control-sidebar-bg"></div>
     </div>
 
-</div>
+    @Scripts.Render("~/bundles/js-lib")
+    @Scripts.Render("~/bundles/admin-lte")
+
+</body>
+</html>

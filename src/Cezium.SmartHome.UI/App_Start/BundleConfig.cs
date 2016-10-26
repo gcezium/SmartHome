@@ -14,12 +14,18 @@ namespace Cezium.SmartHome.UI
 
             bundles.Add(new ScriptBundle("~/bundles/js-lib")
                 .Include("~/Scripts/jquery-{version}.js")
-                .Include("~/Scripts/angular.min.js")
-                .Include("~/Scripts/angular-messages.min.js")
-                .Include("~/Scripts/angular-message-format.min.js")
+                .Include("~/Scripts/angular.js")
+                .Include("~/Scripts/angular-messages.js")
+                .Include("~/Scripts/angular-message-format.js")
                 .Include("~/app/lib/angular/angular-ui-router.js")
+
                 .Include("~/app/shared/components/*.js")
+                .Include("~/app/shared/services/*.js")
                 .Include("~/app/shared/app.components.js")
+
+                .Include("~/app/modules/dashboard/*.js")
+
+                .Include("~/app/app.js")
             );
 
 
