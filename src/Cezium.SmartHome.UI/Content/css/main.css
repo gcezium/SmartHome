@@ -1,4 +1,10 @@
-﻿.main-sidebar {
+﻿.main-header .logo {
+  width: 231px;
+}
+.main-header .navbar {
+  margin-left: 231px;
+}
+.main-sidebar {
   background: white !important;
 }
 .main-sidebar .sidebar-menu li i {
@@ -17,11 +23,81 @@
   text-transform: uppercase;
   font-size: 12px;
 }
-/*
-.content-wrapper{
-    background: #f9fafc;
+.content-wrapper {
+  background: none;
 }
-*/
+.dashboard .cell > div {
+  height: 64px;
+  text-align: center;
+  background: white;
+  border: 1px solid #eee;
+  margin: 10px 5px;
+}
+.dashboard .cell > div .name {
+  font-weight: bolder;
+  font-size: 11px;
+  color: #848484;
+  text-transform: lowercase;
+  display: block;
+  margin: 4px 0 0 12px;
+  text-align: left;
+}
+.dashboard .cell > div .value {
+  font-size: 24px;
+  color: #656565;
+  display: inline-block;
+}
+.dashboard .cell > div .value-separator {
+  width: 1px;
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  top: 4px;
+  margin: 0 6px 0 6px;
+  background: #eee;
+  content: " ";
+}
+.dashboard .cell > div .suffix {
+  font-size: 16px;
+  display: inline-block;
+}
+.dashboard .cell-double > div {
+  height: 148px;
+  text-align: center;
+}
+.dashboard .cell-double > div .name {
+  font-size: 12px;
+  margin: 4px 0 4px 12px;
+}
+.dashboard .cell-double > div .value {
+  font-size: 48px;
+}
+.dashboard .cell-double > div .suffix {
+  font-size: 18px;
+}
+.dashboard openhab-simple-switch {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: center;
+}
+.dashboard openhab-simple-switch span {
+  font-size: 18px;
+  line-height: 64px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: all linear 50ms;
+}
+.dashboard openhab-simple-switch span.off {
+  background: #d56565;
+  color: white;
+}
+.dashboard openhab-simple-switch span.on {
+  background: #b7eec4;
+  color: white;
+}
 .dashboard .info-box .info-box-text {
   display: block;
   text-align: center;

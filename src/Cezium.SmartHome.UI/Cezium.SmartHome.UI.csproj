@@ -61,30 +61,6 @@
       <HintPath>..\packages\NLog.4.3.10\lib\net45\NLog.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SimpleInjector, Version=3.2.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleInjector.3.2.2\lib\net45\SimpleInjector.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SimpleInjector.Extensions.ExecutionContextScoping, Version=3.2.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleInjector.Extensions.ExecutionContextScoping.3.2.2\lib\net45\SimpleInjector.Extensions.ExecutionContextScoping.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SimpleInjector.Extensions.LifetimeScoping, Version=3.2.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleInjector.Extensions.LifetimeScoping.3.2.2\lib\net40-client\SimpleInjector.Extensions.LifetimeScoping.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SimpleInjector.Integration.Web, Version=3.2.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleInjector.Integration.Web.3.2.2\lib\net40\SimpleInjector.Integration.Web.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SimpleInjector.Integration.Web.Mvc, Version=3.2.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleInjector.Integration.Web.Mvc.3.2.2\lib\net40\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SimpleInjector.Integration.WebApi, Version=3.2.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleInjector.Integration.WebApi.3.2.2\lib\net45\SimpleInjector.Integration.WebApi.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -201,7 +177,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\DependencyInjectionConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -234,11 +209,17 @@
   <ItemGroup>
     <Content Include="App\app.js" />
     <Content Include="App\lib\angular\angular-ui-router.js" />
-    <Content Include="App\lib\jquery\iCheck.js" />
+    <Content Include="App\lib\jquery\jquery.atmosphere.js" />
+    <Content Include="App\modules\control\controlCtrl.js" />
+    <Content Include="App\modules\control\templates\index.html" />
     <Content Include="App\modules\dashboard\dashboardCtrl.js" />
     <Content Include="App\modules\dashboard\dashboardPage.js" />
     <Content Include="App\modules\dashboard\templates\index.html" />
+    <Content Include="App\shared\components\openhabItemValue.js" />
+    <Content Include="App\shared\components\openhabSimpleSwitch.js" />
+    <Content Include="App\shared\services\openhabApiService.js" />
     <Content Include="App\shared\services\apiService.js" />
+    <Content Include="App\shared\services\atmosphereSubscriber.js" />
     <Content Include="Content\AdminLTE\bootstrap\css\bootstrap.css" />
     <Content Include="Content\AdminLTE\bootstrap\css\bootstrap.min.css" />
     <Content Include="Content\AdminLTE\bootstrap\fonts\glyphicons-halflings-regular.svg" />
@@ -1096,6 +1077,11 @@
     </Content>
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\ionicons.svg" />
+    <Content Include="Content\img\loginBg\dizajn_interer_bassejn_sovremennyj_111846_1920x1080.jpg" />
+    <Content Include="Content\img\loginBg\interer_dizayn_stil_minimalizm_komnata_divan_oranzhevyy_lampa_vazy_75442_1920x1080.jpg" />
+    <Content Include="Content\img\loginBg\interer_komnata_stil_dizayn_svetlyy_minimalizm_divan_zelenyy_vazy_zheltye_kovrik_parket_75517_1920x1080.jpg" />
+    <Content Include="Content\img\loginBg\interer_kraski_koncept_valik_stena_80272_1920x1080.jpg" />
+    <Content Include="Content\img\loginBg\interer_kvartira_vannaya_komnata_goluboy_16573_1920x1080.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -1976,9 +1962,8 @@
     <Content Include="Scripts\version.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App\shared\components\" />
+    <Folder Include="App\modules\dashboard\components\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Content\img\" />
     <Folder Include="fonts\" />
   </ItemGroup>
   <ItemGroup>

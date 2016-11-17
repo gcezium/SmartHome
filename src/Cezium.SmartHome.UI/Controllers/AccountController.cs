@@ -17,16 +17,11 @@ using System.Net.Mail;
 namespace Cezium.SmartHome.UI.Controllers
 {
     [Authorize]
-    [Authorize]
     public class AccountController : BaseController
     {
-        private IIdentityMessageService _emailService;
-
-
-        public AccountController(ApplicationDbContext dbContext, ILogger logger, IIdentityMessageService emailService)
-            : base(dbContext, logger)
+        public AccountController()
+            : base()
         {
-            _emailService = emailService;
         }
 
 
@@ -130,7 +125,7 @@ namespace Cezium.SmartHome.UI.Controllers
         {
             if (ModelState.IsValid)
             {
-                UserManager.EmailService = _emailService;
+                //UserManager.EmailService = _emailService;
 
                 var user = await UserManager.FindByNameAsync(model.Email);
                 if (user == null)

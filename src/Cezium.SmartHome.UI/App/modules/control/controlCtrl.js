@@ -1,6 +1,6 @@
-﻿function dashboardCtrl(dashboardPage, $scope) {
+﻿function controlCtrl($scope) {
 	var self = this;
-	this.page = new dashboardPage();
+	//this.page = new dashboardPage();
 	/*
 	$scope.$watch('vm.page.Campaign.Id', function (newVal) {
 		if (newVal != 0) {
@@ -10,4 +10,4 @@
 	*/
 };
 
-dashboardCtrl.$inject = ['dashboardPage', '$scope'];
+controlCtrl.$inject = [/*'campaignPage', */'$scope'];

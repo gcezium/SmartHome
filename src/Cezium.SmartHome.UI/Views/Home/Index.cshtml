@@ -158,7 +158,9 @@
                                         <a href="/accounts/profile/@User.Identity.GetUserId()" class="btn btn-default btn-flat">Profile</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="/accounts/logoff" class="btn btn-default btn-flat">Sign out</a>
+                                        <form action="~/account/logoff" method="post">
+                                            <input type="submit" class="btn btn-default btn-flat" value="Sign out" />
+                                        </form>
                                     </div>
                                 </li>
                             </ul>
@@ -192,7 +194,7 @@
                     <li class="header">ИНФО</li>
 
                     <li><a data-ui-sref="actions"><i class="ion-clock"></i><span>События</span></a></li>
-                    <li><a href="#"><span>Server is </span>&nbsp; <i class="fa fa-circle text-success"></i>online</a></li>
+                    <li><a data-ui-sref="hardware"><i class="ion-ios-gear"></i><span>Оборудование</span></a></li>
 
                     @*
                         <li class="treeview">
@@ -219,8 +221,8 @@
         <div class="content-wrapper">
             <section class="content-header">
                 <h1>
-                    главная страница
-                    <small>Обзор всего происходящего</small>
+                    <span data-ng-bind="$state.data.pageTitle"></span>
+                    <small data-ng-bind="$state.data.pageSubTitle"></small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>

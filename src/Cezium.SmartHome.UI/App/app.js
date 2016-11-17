@@ -5,14 +5,24 @@
 		.module('app', ['ui.router'])
 
 		.service('apiService', apiService)
+		.service('openhabApiService', openhabApiService)
+		.factory('atmosphereSubscriber', AtmosphereSubscriber)
 		.factory('dashboardPage', dashboardPage)
 
+		.component('openhabItemValue', openhabItemValue)
+		.component('openhabSimpleSwitch', openhabSimpleSwitch)
+
 		.controller('dashboardCtrl', dashboardCtrl)
+		.controller('controlCtrl', controlCtrl)
 
 		
 		.run(['$rootScope', '$state', '$stateParams', function ($rootScope, $state, $stateParams) {
     		$rootScope.$state = $state;
     		$rootScope.$stateParams = $stateParams;
+
+    		$rootScope.$on('$stateChangeSuccess', function (evt, toState, toParams, fromState, fromParams) {
+    			$rootScope.$state = toState;
+    		});
 		}])
 		
 
@@ -25,30 +35,67 @@
 				.state("dashboard", {
 					url: "/",
 					templateUrl: '/app/modules/dashboard/templates/index.html',
+					controller: dashboardCtrl,
+					data: {
+						pageTitle: 'Обзор'
+					}
 				})
 				.state("control", {
 					url: "/control",
-					template: 'Управление',
+					templateUrl: '/app/modules/control/templates/index.html',
+					controller: controlCtrl,
+					data: {
+						pageTitle: 'Настройки',
+						pageSubTitle: ''
+					}
 				})
 				.state("security", {
 					url: "/security",
-					template: 'Безопасность',
+					template: '',
+					data: {
+						pageTitle: 'Безопасность',
+						pageSubTitle: ''
+					}
 				})
 				.state("reports", {
 					url: "/reports",
-					template: 'отчеты',
+					template: '',
+					data: {
+						pageTitle: 'Статистика',
+						pageSubTitle: ''
+					}
 				})
 				.state("users", {
 					url: "/users",
-					template: 'пользователи',
+					template: '',
+					data: {
+						pageTitle: 'Пользователи',
+						pageSubTitle: ''
+					}
 				})
 				.state("scenarios", {
 					url: "/scenarios",
-					template: 'сценарии',
+					template: '',
+					data: {
+						pageTitle: 'Сценарии',
+						pageSubTitle: ''
+					}
 				})
 				.state("actions", {
 					url: "/actions",
-					template: 'события',
+					template: '',
+					data: {
+						pageTitle: 'События',
+						pageSubTitle: ''
+					}
+				})
+				.state("hardware", {
+					url: "/hardware",
+					template: '',
+					data: {
+						pageTitle: 'Оборудование',
+						pageSubTitle: ''
+					}
 				})
 			;
 		}])

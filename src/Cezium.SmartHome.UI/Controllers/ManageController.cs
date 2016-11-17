@@ -16,8 +16,8 @@ namespace Cezium.SmartHome.UI.Controllers
     [Authorize]
     public class ManageController : BaseController
     {
-        public ManageController(ApplicationDbContext dbContext, ILogger logger)
-            : base(dbContext, logger)
+        public ManageController()
+            : base()
         {
         }
 

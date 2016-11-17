@@ -68,10 +68,10 @@ namespace Cezium.SmartHome.UI.Controllers
         }
 
 
-        public BaseController(ApplicationDbContext db, ILogger logger)
+        public BaseController()
         {
-            _db = db;
-            _logger = logger;
+            _db = new ApplicationDbContext(connectionString);
+            _logger = LogManager.GetCurrentClassLogger();
         }
 
         protected override void Dispose(bool disposing)

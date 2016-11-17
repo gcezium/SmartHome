@@ -2,47 +2,72 @@
 
     <div class="row">
 
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="info-box">
-                <span class="info-box-icon bg-aqua"><i class="ion-thermometer"></i></span>
-                <div class="info-box-content">
-                    <span class="info-box-text">Внутр. температура</span>
-                    <span class="info-box-number">25</span>
-                </div>
+        <div class="col-md-3 cell cell-double">
+            <div>
+                <span class="name">Температура дома</span>
+                <span class="value"><openhab-item-value data-item-name="Temperature_FF_Bed" data-type="temperature" /></span>
+                <span class="suffix">°C</span>
             </div>
         </div>
 
 
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="info-box">
-                <span class="info-box-icon bg-red"><i class="ion-thermometer"></i></span>
-                <div class="info-box-content">
-                    <span class="info-box-text">Наружн. температура</span>
-                    <span class="info-box-number">93,139</span>
+        <div class="col-md-9">
+
+            <div class="row">
+                <div class="col-md-3 cell">
+                    <div>
+                        <span class="name">Температура в спальне</span>
+                        <span class="value"><openhab-item-value data-item-name="Temperature_FF_Bed" data-type="temperature" /></span>
+                        <span class="suffix">°C</span>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 cell">
+                    <div>
+                        <span class="name">Температура в холле</span>
+                        <span class="value"><openhab-item-value data-item-name="Temperature_FF_Bed" data-type="temperature" /></span>
+                        <span class="suffix">°C</span>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 cell">
+                    <div>
+                        <span class="name">Температура на кухне</span>
+                        <span class="value"><openhab-item-value data-item-name="Temperature_FF_Bed" data-type="temperature" /></span>
+                        <span class="suffix">°C</span>
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <div class="row">
+                <div class="col-md-3 cell">
+                    <div>
+                        <span class="name">Ванная</span>
+                        <span class="value"><openhab-item-value data-item-name="Temperature_FF_Bath" data-type="temperature" /></span>
+                        <span class="suffix">°C</span>
+                        <span class="value-separator" />
+                        <span class="value"><openhab-item-value data-item-name="Temperature_FF_Bath" data-type="humidity" /></span>
+                        <span class="suffix">%</span>
+                    </div>
+                </div>
 
 
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="info-box">
-                <span class="info-box-icon bg-green"><i class="ion-umbrella"></i></span>
-                <div class="info-box-content">
-                    <span class="info-box-text">Влажность</span>
-                    <span class="info-box-number">410</span>
+                <div class="col-md-3 cell">
+                    <div>
+                        <openhab-simple-switch data-item-name="Light_C_Corridor_Ceiling" />
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 cell">
+                    <div>
+                        <openhab-item-value data-item-name="Temperature_FF_Office" data-type="temperature" />
+                    </div>
                 </div>
             </div>
-        </div>
 
-
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="info-box">
-                <span class="info-box-icon bg-yellow"><i class="ion-android-sunny"></i></span>
-                <div class="info-box-content">
-                    <span class="info-box-text">Освещенность</span>
-                    <span class="info-box-number">13,648</span>
-                </div>
-            </div>
         </div>
 
     </div>

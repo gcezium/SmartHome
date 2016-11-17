@@ -9,60 +9,33 @@ using System.Web.Http.Cors;
 
 namespace Cezium.SmartHome.Api.Controllers
 {
-    [RoutePrefix("openhab")]
     // TODO
     // CORRECTLY SETUP CORS PORT
     [EnableCors(origins: "*", headers: "*", methods: "*")]
+    [RoutePrefix("openhab")]
     public class OpenHabController : ApiController
     {
-        [Route("item")]
+        [Route("item/{name}")]
         [HttpGet]
-        public HttpResponseMessage GetItem(string name)
+        public IHttpActionResult GetItem(string name)
         {
-            string service_response = WebApiApplication.OpenHabService.GetItem(name);
-
-            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, "");
-            response.Content = new StringContent(service_response, Encoding.UTF8, "application/json");
-
-            return response;
+            return Ok(WebApiApplication.OpenHabService.GetItem(name));
         }
-        /*
-        [Route("items")]
-        [HttpGet]
-        public HttpResponseMessage GetItem(string[] names)
-        {
-            string service_response = WebApiApplication.OpenHabService.GetItem(name);
-
-            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, "");
-            response.Content = new StringContent(service_response, Encoding.UTF8, "application/json");
-
-            return response;
-        }
-        */
 
 
-        [Route("switch")]
+        [Route("switch/{name}")]
         [HttpPost][HttpGet]
-        public HttpResponseMessage Switch(string name)
+        public IHttpActionResult Switch(string name)
         {
-            string service_response = WebApiApplication.OpenHabService.Switch(name);
-
-            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, "");
-            response.Content = new StringContent(service_response, Encoding.UTF8, "application/json");
-
-            return response;
+            return Ok(WebApiApplication.OpenHabService.Switch(name));
         }
 
-        [Route("setstate")]
+
+        [Route("setstate/{name}/{state}")]
         [HttpGet][HttpPost]
-        public HttpResponseMessage SetState(string name, string state)
+        public IHttpActionResult SetState(string name, string state)
         {
-            string service_response = WebApiApplication.OpenHabService.ChangeState(name, state);
-
-            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, "");
-            response.Content = new StringContent(service_response, Encoding.UTF8, "application/json");
-
-            return response;
+            return Ok(WebApiApplication.OpenHabService.ChangeState(name, state));
         }
     }
 }
